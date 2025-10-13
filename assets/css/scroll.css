@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    background: linear-gradient(to left,#10152e, #000000);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Container layout */
+.container {
+  display: flex;
+  flex: 1;
+  margin-top: 70px; /* espaço pro header fixo */
+}
+
+/* Coluna esquerda fixa */
+.col-esquerda {
+  width: 50%;
+  position: sticky;
+  top:80px;
+  height: calc(100vh - 70px);
+  margin-left: 6rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.apresentacao h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.apresentacao p {
+  color: #c61867;
+  font-size: 1.3rem;
+}
+
+.apresentacao .description {
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: 0.99rem;
+}
+
+/* Sidebar */
+.sidebar ul {
+  list-style: none;
+  
+}
+
+.sidebar li {
+  margin: 1rem 0;
+  margin-top: 1rem;
+}
+
+.sidebar a {
+  display: flex;
+  margin-top: 3rem;
+  text-decoration: none;
+  color: #888;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.redes a {
+    color: #888;
+    font-size: 2rem;
+}
+
+.redes .bi-github {
+  display: flex;
+  margin-top: 5rem;
+}
+
+/* Coluna direita scroll */
+.col-direita {
+  width: 65%;
+  overflow-y: auto;
+  padding: 3rem;
+  margin-left: 5rem;
+
+}
+
+.scroll-section {
+  margin-bottom: 5rem;
+}
+
+.scroll-section h2 {
+  color: #c61867;
+  margin-bottom: 1rem;
+}
+
+.scroll-section p {
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .col-esquerda {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+  }
+  .col-direita {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*Seção de skills*/
+
+.skills {
+  width: 80%;
+  max-width: 600px;
+}
+.skills h2 {
+  margin-top: 8rem;
+  margin-bottom: 30px;
+  color: #c61867;
+}
+
+.skills p {
+  margin-bottom: 80px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: 500; 
+}
+
+.bar {
+  width: 100%;
+  background: #1e1e1e;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+}
+ .progress {
+  height: 10px;
+  border-radius: 20px;
+  transition: width 1s ease-in-out;
+ }
+
+ /*Cores e larguras individuais*/
+
+ .progress.html { 
+  width: 80%; 
+  background: #f16529; 
+}
+.progress.css { 
+  width: 70%; 
+  background: #2965f1; 
+}
+.progress.js { 
+  width: 25%; 
+  background: #f7df1e; 
+}
+.progress.github { 
+  width: 20%; 
+  background: #6e5494; 
+}
+.progress.ingles { 
+  width: 20%; 
+  background: #609454; 
+}
+
+/*Seção de Projetos*/
+
+.projects {
+  width: 100%;
+  color: white;
+}
+
+.projects h2 {
+  display: flex;
+  margin-top: 7rem;
+}
+
+.projects .intro {
+  margin-top: 1rem;
+  max-width: 600px;
+  color: #ccc;
+}
+
+.project-container {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 80px;
+  width: 90%;
+}
+
+.project-card {
+  background: #1b1f35;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #ccc;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.project-card .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background:#4f46e5 ;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.project-card .btn:hover {
+  background: #c61867;
+}
+
+/*Seção de contato*/
+
+.contato-container {
+  max-width: 589px;
+  margin-top: 7rem;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contato-container h1 {
+  margin-bottom: 20px;
+  color:#10152e;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contato-form button {
+    background-color: #10152e;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contato-form button:hover {
+    background-color: #3b3f5c;
+}
+
+.whatsapp {
+    margin-top: 20px;
+}
+
+.whatsapp a {
+    text-decoration: none;
+    color: #25d366;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.whatsapp a:hover {
+    color: #128c7e;
+}
