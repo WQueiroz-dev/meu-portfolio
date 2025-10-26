@@ -142,7 +142,7 @@
                     </form>
                     <div class="whatsapp">
                         <p>Ou fale diretamente pelo WhatsApp:</p>
-                        <a href="https://wa.me/SEUNUMERO" target="_blank">
+                        <a href="https://wa.me/5538997278969" target="_blank">
                             <i class="bi bi-whatsapp"></i> WhatsApp
                         </a>
                     </div>
@@ -150,6 +150,26 @@
             </section>
         </main>
     </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("ke8Nk2thVJ67am7mi");
+  })();
+
+  document.querySelector('.contato-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_8jxbt3q', 'template_a6wnfxf', this)
+      .then(() => {
+        alert('Mensagem enviada com sucesso!');
+        this.reset();
+      }, (error) => {
+        alert('Erro ao enviar mensagem: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
 
 </body>
 
